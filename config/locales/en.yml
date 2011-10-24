@@ -1,9 +1,29 @@
 # English strings go here for Rails i18n
 en:
-  field_interval_number: Interval Number
+  title_periodic_task: Periodic tasks
+  title_periodic_task_list: List of periodic tasks
+  title_periodic_task_new: New periodic task
+  title_periodic_task_edit: Periodic task edit
+  button_add_periodic_task: Add Periodic Task
+  
+  field_subject: Task subject
+  field_description: Task description
+  field_assigned_to: User assigned
+  field_interval_number: Interval period
+  field_interval_units: Interval unit
+  field_tracker: Tracker
   field_next_run_date: Next run date (yyyy-mm-dd)
 
-  label_assigned_to_user: Assigned to user
+  label_subject: Task subject
+  label_assigned_to: Assigned user
+  label_next_run_date: Next run date
+
   no_members_in_project: This project has no members
-  label_subject: Subject
-  label_next_run_date: Next Run Date 
+  error_no_project_id: No project ID supplied.
+  message_periodic_task_created: New periodic task added
+  message_periodic_task_updated: Periodic task updated
+
+  description_periodic_task_edit: Use this form to edit this periodic task.
+  description_periodic_task_new: Use this form to add another periodic task.
+  description_periodic_task_list: These are the currently scheduled tasks
+  

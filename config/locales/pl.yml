@@ -1,0 +1,29 @@
+# Polish strings go here for Rails i18n
+pl:
+  title_periodic_task: Zadania okresowe
+  title_periodic_task_list: Lista zdefiniowanych zadań okresowych
+  title_periodic_task_new: Nowe zadanie okresowe
+  title_periodic_task_edit: Edycja zadania okresowego
+  button_add_periodic_task: Nowe zadanie okresowe
+  
+  field_subject: Temat zagadnienia
+  field_description: Opis zagadnienia
+  field_assigned_to: Przydzielone do
+  field_interval_number: Okres
+  field_interval_units: Jednostka okresu
+  field_tracker: Typ zagadnienia
+  field_next_run_date: Początek od (yyyy-mm-dd)
+
+  label_subject: Temat zagadnienia
+  label_assigned_to: Przydzielone do
+  label_next_run_date: Data następnego utworzenia
+
+  no_members_in_project: Projekt nie ma żadnych uczestników
+  error_no_project_id: Nie wskazano projektu.
+  message_periodic_task_created: Dodano nowe zadanie okresowe
+  message_periodic_task_updated: Zaktualizowano zadanie okresowe
+
+  description_periodic_task_edit: Użyj poniższego formularza do edycji zadania okresowego.
+  description_periodic_task_new: Użyj poniższego formularza do stworzenia nowego zadania okresowego.
+  description_periodic_task_list: Poniżej znajduje się lista aktualnie zdefiniowanych zadań okresowych.
+  

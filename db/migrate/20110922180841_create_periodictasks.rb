@@ -6,6 +6,7 @@ class CreatePeriodictasks < ActiveRecord::Migration
       t.column :assigned_to_id, :integer
       t.column :author_id, :integer
       t.column :subject, :string
+      t.column :description, :text
       t.column :interval_number, :integer
       t.column :interval_units, :string
       t.column :last_assigned_date, :datetime

@@ -1,16 +1,16 @@
-<h2>Periodictask#index</h2>
+<h2><%= l(:title_periodic_task) %></h2>
 <% if @project_identifier %>
 
 <div class="contextual">
-<%= link_to('Add Periodic Task',
+<%= link_to( l(:button_add_periodic_task),
                           {:controller => 'periodictask', :action => 'new', :project_id => @project},
                           :class => 'icon icon-add',
                           :onclick => 'Element.show("add-task"); Form.Element.focus("periodictask_subject"); return false;') if @project %>
 </div>
 
 <div id="add-task" style="display:none;">
-<h2><%= l(:label_email_assignment_new) %></h2>
-<p>Use this form to add another task.</p>
+<h2><%= l(:title_periodic_task_new) %></h2>
+<p><%= l(:description_periodic_task_new) %></p>
 <% labelled_tabular_form_for :periodictask, @periodictask, 
   :url => { :controller => 'periodictask', :action => 'new', :project_id => @project },
   :html => { :id => 'task-form' } do |f| %>
@@ -20,18 +20,23 @@
 <% end if @project %>
 </div>
 
-<h2>Periodic Tasks</h2>
-<p>These are the currently scheduled tasks</p>
+<h2><%= l(:title_periodic_task_list) %></h2>
+<p><%= l(:description_periodic_task_list) %></p>
 <table class="list">
   <thead>
     <tr>
-      <th><%= l(:label_subject) %></th><th><%= l(:label_next_run_date) %></th><th>&nbsp</th><th>&nbsp</th>
+      <th><%= l(:label_subject) %></th>
+      <th><%= l(:label_assigned_to) %></th>
+      <th><%= l(:label_next_run_date) %></th>
+      <th>&nbsp</th>
+      <th>&nbsp</th>
     </tr>
   </thead>
   <tbody>
     <% @tasks.each do |a| %>
     <tr class="<%= cycle('odd', 'even') %>">
       <td><%= a.subject %></td>
+      <td><%=h(a.assigned_to.name) if a.assigned_to %></td>
       <td><%= a.next_run_date %></td>
       <td>
   <%= link_to l(:button_edit), 
@@ -49,5 +54,5 @@
 </table>
 
 <% else %>
-  <p>No project ID supplied</p>
+  <p><%= l(:error_no_project_id) %></p>
 <% end %>

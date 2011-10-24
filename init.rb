@@ -7,5 +7,5 @@ Redmine::Plugin.register :redmine_periodictask do
   version '1.0.0'
 
   permission :periodictask, {:periodictask => [:index, :edit]}, :public => true
-  menu :project_menu, :periodictask, { :controller => 'periodictask', :action => 'index' }, :caption => 'Periodic Task', :after => :settings, :param => :project_id
+  menu :project_menu, :periodictask, { :controller => 'periodictask', :action => 'index' }, :caption => :title_periodic_task, :after => :settings, :param => :project_id
 end
