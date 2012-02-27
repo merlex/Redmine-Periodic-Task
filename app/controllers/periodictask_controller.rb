@@ -1,7 +1,7 @@
 class PeriodictaskController < ApplicationController
   unloadable
 
-
+  before_filter :find_project, :authorize , :only => [:index, :edit]
   before_filter :find_project
   before_filter :find_periodictask, :except => [:new, :index]
   before_filter :load_users, :except => [:destroy]
