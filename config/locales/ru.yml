@@ -1,0 +1,29 @@
+# English strings go here for Rails i18n
+en:
+  title_periodic_task: Повторяющиеся задачи
+  title_periodic_task_list: Список повторяющихся задач
+  title_periodic_task_new: Новая повторяющаяся задача
+  title_periodic_task_edit: Редактирование задачи
+  button_add_periodic_task: Создать задачу
+  
+  field_subject: Тема
+  field_description: Описание
+  field_assigned_to: Исполнитель
+  field_interval_number: Период
+  field_interval_units: Еденица периода
+  field_tracker: Трекер
+  field_next_run_date: Дата создания следующей задачи (yyyy-mm-dd)
+
+  label_subject: Тема
+  label_assigned_to: Исполнитель
+  label_next_run_date: Дата следующей задачи
+
+  no_members_in_project: В этом проекте нет участников
+  error_no_project_id: No project ID supplied.
+  message_periodic_task_created: Новая повторяющаяся задача добавлена
+  message_periodic_task_updated: Повторяющаяся задача обновлена
+
+  description_periodic_task_edit: Используйте эту форму для редактирования задачи.
+  description_periodic_task_new: Используйте эту форму для создания новой задачи.
+  description_periodic_task_list: Запланированные задачи
+  
