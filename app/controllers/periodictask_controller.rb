@@ -72,6 +72,7 @@ private
     #  WHERE project_id = ' + @project[:id].to_s + '
     #  AND status = 1
     #  ORDER BY firstname ASC')
+    @project = Project.find(params[:project_id])
     @users = []
     @project.members.each do |m|
       @users << m.user
