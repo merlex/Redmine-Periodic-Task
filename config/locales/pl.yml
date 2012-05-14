@@ -12,6 +12,7 @@ pl:
   field_interval_number: Okres
   field_interval_units: Jednostka okresu
   field_tracker: Typ zagadnienia
+  field_priority: Priority
   field_next_run_date: Początek od (yyyy-mm-dd)
 
   label_subject: Temat zagadnienia

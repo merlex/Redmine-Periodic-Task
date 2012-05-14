@@ -9,7 +9,7 @@ en:
   field_subject: Тема
   field_description: Описание
   field_assigned_to: Исполнитель
-  field_interval_number: Период
+  field_interval_number: Период повторения
   field_interval_units: Еденица периода
   field_tracker: Трекер
   field_priority: Приоритет
