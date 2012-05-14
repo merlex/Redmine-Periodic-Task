@@ -12,6 +12,7 @@ en:
   field_interval_number: Период
   field_interval_units: Еденица периода
   field_tracker: Трекер
+  field_priority: Приоритет
   field_next_run_date: Дата создания следующей задачи (yyyy-mm-dd)
 
   label_subject: Тема

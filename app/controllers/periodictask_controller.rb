@@ -5,6 +5,7 @@ class PeriodictaskController < ApplicationController
   before_filter :find_project
   before_filter :find_periodictask, :except => [:new, :index]
   before_filter :load_users, :except => [:destroy]
+  before_filter :load_priorities, :except => [:destroy]
 
   def index
     if !params[:project_id] then return end
@@ -78,5 +79,9 @@ private
       @users << m.user
     end
 
+  end
+  def load_priorities
+    #
+    @priorities = IssuePriority.all
   end
 end

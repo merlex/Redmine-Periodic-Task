@@ -12,6 +12,7 @@ en:
   field_interval_number: Interval period
   field_interval_units: Interval unit
   field_tracker: Tracker
+  field_priority: Priority
   field_next_run_date: Next run date (yyyy-mm-dd)
 
   label_subject: Task subject

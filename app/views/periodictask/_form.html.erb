@@ -16,5 +16,6 @@
 <p><%= f.text_field :interval_number, :required=> true, :size => 3 %> </p>
 <p><%= label(:periodictask, :interval_units, l(:field_interval_units)) %><%= select 'periodictask', 'interval_units', Periodictask::INTERVAL_UNITS %></p>
 <P><%= label(:periodictask, :tracker_id, l(:field_tracker)) %><%= collection_select("periodictask", "tracker_id", @project.trackers, :id, :name ) %></p>
-<P><%= f.text_field :next_run_date %> 
+<P><%= label(:periodictask, :priority_id, l(:field_priority)) %><%= collection_select("periodictask", "priority_id", @priorities, :id, :name ) %></p>
+<P><%= f.text_field :next_run_date %>
 </div>
