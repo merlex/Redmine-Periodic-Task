@@ -37,7 +37,7 @@
     <tr class="<%= cycle('odd', 'even') %>">
       <td><%= a.subject %></td>
       <td><%=h(a.assigned_to.name) if a.assigned_to %></td>
-      <td><%= a.next_run_date %></td>
+      <td><%= a.next_run_date.to_date %></td>
       <td>
   <%= link_to l(:button_edit), 
                             {:controller => 'periodictask', :action => 'edit', :id => a.id, :project_id => @project},
