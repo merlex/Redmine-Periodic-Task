@@ -1,5 +1,5 @@
-# English strings go here for Rails i18n
-en:
+# Russian strings go here for Rails i18n
+ru:
   title_periodic_task: Повторяющиеся задачи
   title_periodic_task_list: Список повторяющихся задач
   title_periodic_task_new: Новая повторяющаяся задача
