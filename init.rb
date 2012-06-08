@@ -1,5 +1,7 @@
 require 'redmine'
 
+require_dependency 'cmg_issue_hooks'
+
 Redmine::Plugin.register :redmine_periodictask do
   name 'Redmine Periodictask plugin'
   author 'Tanguy de Courson'
