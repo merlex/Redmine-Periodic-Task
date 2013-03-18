@@ -1,23 +1,9 @@
-<h2><%= l(:title_periodic_task) %></h2>
 <% if @project_identifier %>
 
 <div class="contextual">
-<%= link_to( l(:button_add_periodic_task),
+<%= link_to('Add Periodic Task',
                           {:controller => 'periodictask', :action => 'new', :project_id => @project},
-                          :class => 'icon icon-add',
-                          :onclick => 'Element.show("add-task"); Form.Element.focus("periodictask_subject"); return false;') if @project %>
-</div>
-
-<div id="add-task" style="display:none;">
-<h2><%= l(:title_periodic_task_new) %></h2>
-<p><%= l(:description_periodic_task_new) %></p>
-<% labelled_tabular_form_for :periodictask, @periodictask, 
-  :url => { :controller => 'periodictask', :action => 'new', :project_id => @project },
-  :html => { :id => 'task-form' } do |f| %>
-<%= render :partial => 'periodictask/form', :locals => { :f => f } %>
-<%= submit_tag l(:button_create) %>
-<%= link_to l(:button_cancel), "#", :onclick => 'Element.hide("add-task")' %>
-<% end if @project %>
+                          :class => 'icon icon-add') %>
 </div>
 
 <h2><%= l(:title_periodic_task_list) %></h2>
@@ -25,27 +11,23 @@
 <table class="list">
   <thead>
     <tr>
-      <th><%= l(:label_subject) %></th>
-      <th><%= l(:label_assigned_to) %></th>
-      <th><%= l(:label_next_run_date) %></th>
-      <th>&nbsp</th>
-      <th>&nbsp</th>
+      <th><%= l(:label_subject) %></th><th><%= l(:label_assigned_to) %></th><th><%= l(:label_next_run_date) %></th><th>&nbsp</th><th>&nbsp</th>
     </tr>
   </thead>
   <tbody>
     <% @tasks.each do |a| %>
     <tr class="<%= cycle('odd', 'even') %>">
-      <td><%= a.subject %></td>
-      <td><%=h(a.assigned_to.name) if a.assigned_to %></td>
-      <td><%= a.next_run_date.to_date %></td>
-      <td>
+      <td align="center"><%= a.subject %></td>
+      <td align="center"><%=h(a.assigned_to.name) if a.assigned_to %></td>
+      <td align="center"><%= a.next_run_date.to_date %></td>
+      <td align="right">
   <%= link_to l(:button_edit), 
                             {:controller => 'periodictask', :action => 'edit', :id => a.id, :project_id => @project},
                             :class => 'icon icon-edit',
                             :accesskey => accesskey(:edit),
                             :onclick => 'Element.show("edit-task"); return false;' %>
       </td>
-      <td>
+      <td align="left">
   <%= link_to l(:button_delete), {:controller => 'periodictask', :action => 'destroy', :id => a.id, :project_id => @project}, :confirm => l(:text_are_you_sure), :method => :post, :class => 'icon icon-del' %>
       </td>
     </tr>
@@ -54,5 +36,5 @@
 </table>
 
 <% else %>
-  <p><%= l(:error_no_project_id) %></p>
+  <p>No project ID supplied</p>
 <% end %>

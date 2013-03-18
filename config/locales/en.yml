@@ -17,6 +17,7 @@ en:
 
   label_subject: Task subject
   label_assigned_to: Assigned user
+  label_assigned_to_user: Assigned to user
   label_next_run_date: Next run date
 
   no_members_in_project: This project has no members

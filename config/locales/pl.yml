@@ -17,6 +17,7 @@ pl:
 
   label_subject: Temat zagadnienia
   label_assigned_to: Przydzielone do
+  label_assigned_to_user: Przydzielone do
   label_next_run_date: Data następnego utworzenia
 
   no_members_in_project: Projekt nie ma żadnych uczestników

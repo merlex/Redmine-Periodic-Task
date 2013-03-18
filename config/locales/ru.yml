@@ -17,6 +17,7 @@ ru:
 
   label_subject: Тема
   label_assigned_to: Исполнитель
+  label_assigned_to_user: Исполнитель
   label_next_run_date: Дата следующей задачи
 
   no_members_in_project: В этом проекте нет участников
